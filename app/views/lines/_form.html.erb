@@ -1,0 +1,47 @@
+<%= form_with(model: line, local: true) do |form| %>
+  <% if line.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(line.errors.count, "error") %> prohibited this line from being saved:</h2>
+
+      <ul>
+      <% line.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code, id: :line_code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :itinerary %>
+    <%= form.text_field :itinerary, id: :line_itinerary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company, id: :line_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :terminal %>
+    <%= form.text_field :terminal, id: :line_terminal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :map_id %>
+    <%= form.text_field :map_id, id: :line_map_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kml_filename %>
+    <%= form.text_field :kml_filename, id: :line_kml_filename %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

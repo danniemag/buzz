@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @line.code %>
+</p>
+
+<p>
+  <strong>Itinerary:</strong>
+  <%= @line.itinerary %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @line.company %>
+</p>
+
+<p>
+  <strong>Terminal:</strong>
+  <%= @line.terminal %>
+</p>
+
+<p>
+  <strong>Map:</strong>
+  <%= @line.map_id %>
+</p>
+
+<p>
+  <strong>Kml filename:</strong>
+  <%= @line.kml_filename %>
+</p>
+
+<%= link_to 'Edit', edit_line_path(@line) %> |
+<%= link_to 'Back', lines_path %>
