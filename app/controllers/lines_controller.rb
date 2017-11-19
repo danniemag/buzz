@@ -4,7 +4,15 @@ class LinesController < ApplicationController
   # GET /lines
   # GET /lines.json
   def index
-    @lines = Line.all
+    @lines = Line.order(:code).limit(50)
+  end
+
+
+  def search
+    respond_to do |format|
+      format.html
+      format.json { @lines = Line.search(params[:term]) }
+    end
   end
 
   # GET /lines/1

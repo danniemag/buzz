@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
-  resources :lines
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :lines do
+    get :search, :on => :collection
+  end
+
+  resources :handlers, :only => [:index]
+
+  root 'lines#index'
 end
