@@ -1,0 +1,50 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 100%;
+  font-weight: 300;
+}
+
+input {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+a {
+  color: #08c;
+  text-decoration: none;
+
+  &:hover {
+    color: #f99;
+  }
+}
+
+.app-cont {
+  max-width: 60em;
+  margin: 0 auto;
+}
+
+.app-title {
+  margin-bottom: 2em;
+
+  &.cf {
+    h1 {
+      float: left;
+      font-size: 1.2em;
+    }
+
+    a {
+      float: right;
+      text-decoration: underline;
+      font-size: .9em;
+      display: inline-block;
+      margin-left: 1em;
+    }
+  }
+}
+
+@media (max-width: 60em) {
+  .app-cont {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}

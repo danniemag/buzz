@@ -19,7 +19,7 @@ app.Lines.prototype = {
             '<span class="img">'+ item.code + ' '+'</span>',
             // '<span class="title">' + item.code + '</span>',
             '<span class="author">' + item.itinerary + '</span>',
-            '<span class="price">'+'['+ item.company + ']' + '</span>'
+            // '<span class="price">'+'['+ item.company + ']' + '</span>'
         ];
         return $('<li>')
             .append(markup.join(''))

@@ -1,11 +1,77 @@
-<header class="app-header">
-  <div class="inner app-cont cf">
-    <h1 class="logo">
-      <%= link_to 'buzz lines', root_path %>
-    </h1>
+<!-- Desktop Header -->
+<header class="mkd-page-header" style="margin-bottom: 0px;">
+  <div class="mkd-fixed-wrapper">
+    <div class="mkd-menu-area">
+      <div class="mkd-vertical-align-containers">
+        <div class="mkd-position-left">
+          <div class="mkd-position-left-inner">
+            <div class="mkd-logo-wrapper">
+              <a itemprop="url" href="/" style="height: 39px;">
+                <%= image_tag('lister-logo.png', class: 'mkd-normal-logo', size: '260x78', alt: 'logo') %>
+                <%= image_tag('lister-logo.png', class: 'mkd-dark-logo', size: '260x78', alt: 'dark') %>
+                <%= image_tag('lister-logo.png', class: 'mkd-light-logo', size: '260x78', alt: 'light') %>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mkd-position-right">
+          <div class="mkd-position-right-inner">
+            <div class="widget mkd-button-widget">
+              <a itemprop="url" href="/" target="_self" style="color: rgb(255, 255, 255); background-color: rgb(63, 133, 206);"
+                 class="mkd-btn mkd-btn-small mkd-btn-solid mkd-btn-custom-hover-bg mkd-btn-custom-hover-color mkd-btn-icon mkd-btn-icon-hover-animation"
+                 data-hover-color="#fff" data-hover-bg-color="#4097F6" data-icon-bck-color="#5093D3" data-icon-bck-hover-color="#4FA2F9">
+                <span class="mkd-btn-text">Itinerários</span>
+                <span class="mkd-btn-icon-html" style="background-color: rgb(80, 147, 211);">
+												<span aria-hidden="true" class="fa fa-map-signs"></span>
+												<span class="mkd-btn-icon-hover">
+													<span aria-hidden="true" class="mkd-icon-font-elegant icon_plus "></span>
+												</span>
+											</span>
+              </a>
+            </div>
+            <div class="widget mkd-button-widget">
+              <a itemprop="url" href="http://www.google.com/" target="_self" style="color: rgb(255, 255, 255); background-color: rgb(63, 133, 206);"
+                 class="mkd-btn mkd-btn-small mkd-btn-solid mkd-btn-custom-hover-bg mkd-btn-custom-hover-color mkd-btn-icon mkd-btn-icon-hover-animation"
+                 data-hover-color="#fff" data-hover-bg-color="#4097F6" data-icon-bck-color="#5093D3" data-icon-bck-hover-color="#4FA2F9">
+                <span class="mkd-btn-text">Logradouros</span>
+                <span class="mkd-btn-icon-html" style="background-color: rgb(80, 147, 211);">
+												<span aria-hidden="true" class="fa fa-road"></span>
+												<span class="mkd-btn-icon-hover">
+													<span aria-hidden="true" class="mkd-icon-font-elegant icon_plus "></span>
+												</span>
+											</span>
+              </a>
+            </div>
+            <div class="widget mkd-login-register-widget"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <nav class="nav">
-      <li><%= link_to 'Search', search_lines_path %></li>
-    </nav>
+<!-- Mobile Header -->
+<header class="mkd-mobile-header" style="margin-bottom: 0px;">
+  <div class="mkd-mobile-header-inner">
+    <div class="mkd-mobile-header-holder">
+      <div class="mkd-grid">
+        <div class="mkd-vertical-align-containers">
+          <div class="mkd-vertical-align-containers">
+            <div class="mkd-position-center">
+              <div class="mkd-position-center-inner">
+                <div class="mkd-mobile-logo-wrapper">
+                  <a itemprop="url" href="http://lister.mikado-themes.com/" style="height: 39px">
+                    <%= image_tag('lister-logo.png', size: '260x78', alt: 'Mobile Logo') %>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="mkd-position-right">
+              <div class="mkd-position-right-inner"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
