@@ -1,7 +1,7 @@
 <style>
   #map {
-    height: 360px;
-    width: 300px;
+    height: 660px;
+    width: 1100px;
     overflow: hidden;
     float: left;
     border: thin solid #333;
@@ -28,7 +28,7 @@
 
               <div class="mkd-listing-rating-holder">
                 <div class="mkd-average-rating">
-                  <span><i class="fa fa-building-o" aria-hidden="true"></i> <%= @line.terminal %> | <%= @line.id %></span>
+                  <span><i class="fa fa-building-o" aria-hidden="true"></i> <%= @line.terminal %> | <%= @line.kml_filename %></span>
               </div>
               <div class="mkd-listing-rating-stars-holder">
                 <span class="mkd-rating-stars" style="width: 71.4%"></span>
@@ -41,11 +41,13 @@
       </div>
 
       <div class="mkd-ls-single-section-inner  right">
-        <a href="https://www.google.com/maps/d/viewer?hl=pt-BR&mid=1sQLaxVGgxeS3r3EgzT05vkLAsBEaGlLW&ll=-22.908343767465553%2C-43.17516999999998&z=18">
+        <a href="https://www.google.com/maps/d/viewer?hl=pt-BR&mid=1sQLaxVGgxeS3r3EgzT05vkLAsBEaGlLW&ll=-22.908343767465553%2C-43.17516999999998&z=18" target="_blank">
           <button type="submit" style="background-color: #2c84cc;font-size: 14px" class="mkd-btn mkd-btn-huge mkd-btn-solid mkd-btn-fullwidth mkd-ls-single-contact-listing">    <span class="mkd-btn-text">Visualizar no Maps</span>    </button>
         </a>
     </div>
     </div>
+
+    <% kfile = 'http://projetobuzz.com.br/kml/' + @line.kml_filename + '.kmz' %>
 
     <div class="mkd-ls-single-section-holder bottom">
       <div class="mkd-ls-single-section mkd-grid clearfix">
@@ -78,7 +80,7 @@
     }
 </script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGJEmtpjtyx-V5NL4EUpANsydcD2TdYmY&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=+AIzaSyAGJEmtpjtyx-V5NL4EUpANsydcD2TdYmY&callback=initMap">
 </script>
 
   <!--<p id="notice">%= notice %></p>-->
