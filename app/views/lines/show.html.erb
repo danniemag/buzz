@@ -62,8 +62,7 @@
 
 <script>
     var map;
-    var src = 'http://projetobuzz.com.br/kml/2333.kmz';
-    // var src = 'https://developers.google.com/maps/documentation/javascript/examples/kml/westcampus.kml';
+    var src = "http://projetobuzz.com.br/kml/<%=@line.kml_filename%>.kmz";
 
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -80,37 +79,5 @@
     }
 </script>
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=+AIzaSyAGJEmtpjtyx-V5NL4EUpANsydcD2TdYmY&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=<%=@key%>&callback=initMap&region=BR">
 </script>
-
-  <!--<p id="notice">%= notice %></p>-->
-
-  <!--<p>-->
-    <!--<strong>Code:</strong>-->
-    <!--%= @line.code %>-->
-  <!--</p>-->
-
-  <!--<p>-->
-    <!--<strong>Itinerary:</strong>-->
-    <!--%= @line.itinerary %>-->
-  <!--</p>-->
-
-  <!--<p>-->
-    <!--<strong>Company:</strong>-->
-    <!--%= @line.company %>-->
-  <!--</p>-->
-
-  <!--<p>-->
-    <!--<strong>Terminal:</strong>-->
-    <!--%= @line.terminal %>-->
-  <!--</p>-->
-
-  <!--<p>-->
-    <!--<strong>Map:</strong>-->
-    <!--%= @line.map_id %>-->
-  <!--</p>-->
-
-  <!--<p>-->
-    <!--<strong>Kml filename:</strong>-->
-    <!--%= @line.kml_filename %>-->
-  <!--</p>-->
