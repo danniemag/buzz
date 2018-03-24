@@ -1,34 +1,83 @@
-<p id="notice"><%= notice %></p>
+<style>
+  #map {
+    height: 660px;
+    width: 1100px;
+    overflow: hidden;
+    float: left;
+    border: thin solid #333;
+  }
+</style>
 
-<p>
-  <strong>Code:</strong>
-  <%= @line.code %>
-</p>
+<div class="mkd-ls-single-header">
+  <div class="mkd-ls-single-section-holder top">
+    <div class="mkd-ls-single-section mkd-grid clearfix">
+      <div class="mkd-ls-single-section-inner  left">
+        <div class="mkd-ls-single-part-holder right">
 
-<p>
-  <strong>Itinerary:</strong>
-  <%= @line.itinerary %>
-</p>
+          <div class="mkd-ls-single-part-inner top">
+            <div class="mkd-ls-item-title">
+              <h3 class="mkd-ls-item-title-inner"><%= @line.code %> | <%= @line.itinerary %></h3>
+            </div>
+          </div>
 
-<p>
-  <strong>Company:</strong>
-  <%= @line.company %>
-</p>
+          <div class="mkd-ls-single-part-inner bottom">
+            <div itemprop="dateCreated" class="mkd-ls-header-info date  entry-date published updated">
+              <a itemprop="url" href="http://lister.mikado-themes.com/2017/03/">
+                <i class="fa fa-bus" aria-hidden="true"></i> <%= @line.company %></a>
+            </div>
 
-<p>
-  <strong>Terminal:</strong>
-  <%= @line.terminal %>
-</p>
+              <div class="mkd-listing-rating-holder">
+                <div class="mkd-average-rating">
+                  <span><i class="fa fa-building-o" aria-hidden="true"></i> <%= @line.terminal %> | <%= @line.kml_filename %></span>
+              </div>
+              <div class="mkd-listing-rating-stars-holder">
+                <span class="mkd-rating-stars" style="width: 71.4%"></span>
+              </div>
+            </div>
 
-<p>
-  <strong>Map:</strong>
-  <%= @line.map_id %>
-</p>
+          </div>
+        </div>
 
-<p>
-  <strong>Kml filename:</strong>
-  <%= @line.kml_filename %>
-</p>
+      </div>
 
-<%= link_to 'Edit', edit_line_path(@line) %> |
-<%= link_to 'Back', lines_path %>
+      <div class="mkd-ls-single-section-inner  right">
+        <a href="https://www.google.com/maps/d/viewer?hl=pt-BR&mid=1sQLaxVGgxeS3r3EgzT05vkLAsBEaGlLW&ll=-22.908343767465553%2C-43.17516999999998&z=18" target="_blank">
+          <button type="submit" style="background-color: #2c84cc;font-size: 14px" class="mkd-btn mkd-btn-huge mkd-btn-solid mkd-btn-fullwidth mkd-ls-single-contact-listing">    <span class="mkd-btn-text">Visualizar no Maps</span>    </button>
+        </a>
+    </div>
+    </div>
+
+    <% kfile = 'http://projetobuzz.com.br/kml/' + @line.kml_filename + '.kmz' %>
+
+    <div class="mkd-ls-single-section-holder bottom">
+      <div class="mkd-ls-single-section mkd-grid clearfix">
+        <div class="mkd-ls-single-section-inner left">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    var map;
+    var src = "http://projetobuzz.com.br/kml/<%=@line.kml_filename%>.kmz";
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: new google.maps.LatLng(-19.257753, 146.823688),
+            zoom: 2,
+            mapTypeId: 'roadmap'
+        });
+
+        var kmlLayer = new google.maps.KmlLayer(src, {
+            suppressInfoWindows: true,
+            preserveViewport: false,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=<%=@key%>&callback=initMap&region=BR">
+</script>

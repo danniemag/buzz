@@ -3,13 +3,18 @@
 <head>
   <title>Buzz</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' %>
+  <%= stylesheet_link_tag    'listing.min', 'listing-responsive.min', 'membership-style.min', 'style', 'modules.min',
+                             'modules-responsive.min', 'js_composer.min', 'css'  %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= page_class %>">
-
-<%= render 'layouts/header' %>
-<%= yield %>
+  <%= render 'layouts/header' %>
+  <%= render 'partials/searcher' if page_class == 'page-lines search' %>
+  <%= render 'layouts/technologies' if page_class == 'page-lines search' %>
+  <%= render 'layouts/footer' if page_class == 'page-lines search' %>
+  <%= yield %>
 
 <script>
     $(function() {
