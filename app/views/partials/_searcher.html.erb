@@ -1,41 +1,15 @@
-<div class="mkd-row-grid-section">
-  <div class="vc_row wpb_row vc_inner vc_row-fluid mkd-content-aligment-center">
-    <div class="wpb_column vc_column_container vc_col-sm-12 vc_col-lg-offset-2 vc_col-lg-8">
-      <div class="vc_column-inner ">
-        <div class="wpb_wrapper">
-          <form method="get" action="http://lister.mikado-themes.com/jobs/">
-            <div class="mkd-ls-main-search-holder clearfix mkd-light-skin">
-              <div class="mkd-ls-main-search-holder-part keyword">
-                <div class="mkd-ls-search-icon">
-                  <span aria-hidden="true" class="fa fa-search"></span>
-                </div>
-                <input type="text" id="lines-search-txt" class="mkd-ls-main-search-keyword ui-autocomplete-input" name="mkd-ls-main-search-keyword" placeholder="Buscar por linha ou itinerário"
-                       autocomplete="off" autofocus>
-                <!--<input type="text" id="lines-search-txt" autofocus>-->
-              </div>
-            </div>
-          </form>
-          <div class="vc_empty_space" style="height: 35px">
-            <span class="vc_empty_space_inner"></span>
-          </div>
-
-          <a itemprop="url" href="http://www.google.com/" target="_self" style="background-color: rgb(125, 197, 15); border-color: rgb(125, 197, 15); font-size: 14px;"
-             class="mkd-btn mkd-btn-small mkd-btn-solid mkd-btn-custom-hover-bg mkd-btn-custom-hover-color mkd-btn-icon mkd-btn-icon-hover-animation"
-             data-hover-color="#fff" data-hover-bg-color="#4097F6" data-icon-bck-color="#5093D3" data-icon-bck-hover-color="#4FA2F9">
-            <span class="mkd-btn-text">Ou procure por logradouro</span>
-            <span class="mkd-btn-icon-html" style="background-color: rgb(204, 255, 102);">
-                                                <span aria-hidden="true" class="fa fa-road"></span>
-                                                <span class="mkd-btn-icon-hover">
-                                                  <span aria-hidden="true" class="mkd-icon-font-elegant icon_plus "></span>
-                                                </span>
-                                              </span>
-          </a>
-        </div>
-      </div>
-    </div>
+<div class="search">
+  <i> </i>
+  <div class="s-bar">
+    <form>
+      <input type="text" id="lines-search-txt" value="Encontre seu buzz" onfocus="this.value = '';"
+             onblur="if (this.value == '') {this.value = 'Encontre seu buzz';}"
+             class="mkd-ls-main-search-keyword ui-autocomplete-input">
+      <input type="submit"  value="Meu Buzz"/>
+    </form>
   </div>
+  <p>Popular searches: <a href="#">Modern PSD template,</a> <a href="#"> Portfolio design </a></p>
 </div>
-
 
 <%= content_for :script do %>
     new app.Lines;

@@ -10,8 +10,8 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= render 'partials/header' %>
-    <%= render 'partials/searcher'%>
+    <%= render 'partials/header' if page_class == 'page-lines search'  %>
+    <%= render 'partials/searcher' if page_class == 'page-lines search' %>
     <!--%= render 'layouts/technologies' if page_class == 'page-lines search' %>-->
     <!--%= render 'layouts/footer' if page_class == 'page-lines search' %>-->
     <%= yield %>

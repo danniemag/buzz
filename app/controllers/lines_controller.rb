@@ -13,22 +13,16 @@ class LinesController < ApplicationController
     end
   end
 
-  # GET /lines/1
-  # GET /lines/1.json
   def show
   end
 
-  # GET /lines/new
   def new
     @line = Line.new
   end
 
-  # GET /lines/1/edit
   def edit
   end
 
-  # POST /lines
-  # POST /lines.json
   def create
     @line = Line.new(line_params)
 
@@ -43,8 +37,6 @@ class LinesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /lines/1
-  # PATCH/PUT /lines/1.json
   def update
     respond_to do |format|
       if @line.update(line_params)
@@ -57,8 +49,6 @@ class LinesController < ApplicationController
     end
   end
 
-  # DELETE /lines/1
-  # DELETE /lines/1.json
   def destroy
     @line.destroy
     respond_to do |format|
