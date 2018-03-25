@@ -12,6 +12,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
-Rails.application.config.assets.precompile += %w( listing.min.css listing-responsive.min.css membership-style.min.css
-                                                  style.css modules.min.css modules-responsive.min.css
-                                                  js_composer.min.css css.css )
+Rails.application.config.assets.precompile += %w( listing.min.css listing-responsive.min.css main.css
+                                                  membership-style.min.css style.css modules.min.css
+                                                  modules-responsive.min.css js_composer.min.css css.css )

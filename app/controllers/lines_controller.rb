@@ -1,8 +1,6 @@
 class LinesController < ApplicationController
   before_action :set_line, only: [:show, :edit, :update, :destroy]
 
-  # GET /lines
-  # GET /lines.json
   def index
     @lines = Line.order(:code).limit(50)
   end
