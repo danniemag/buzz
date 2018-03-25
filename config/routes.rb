@@ -5,5 +5,5 @@ Rails.application.routes.draw do
 
   resources :handlers, :only => [:index]
 
-  root 'lines#index'
+  root 'lines#search'
 end
