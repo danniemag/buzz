@@ -23,6 +23,9 @@
 # IDE files
 .generators
 .rakeTasks
-config/spring.rb
+/config/spring.rb
 
 
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
