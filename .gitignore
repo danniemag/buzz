@@ -19,3 +19,10 @@
 .byebug_history
 
 \.idea/
+
+# IDE files
+.generators
+.rakeTasks
+config/spring.rb
+
+
